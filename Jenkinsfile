@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo "Git checkout"
                 sh 'git --version'
-                git branch: 'main', url: 'https://github.com/J3GI/ci-cd-test'
+                git branch: 'main', url: 'https://github.com/J3GI/ci-cd-test.git'
             }
         }
         stage('Build Docker image') {
@@ -61,7 +61,7 @@ pipeline {
         }
         stage('Function Test') {
             steps {
-                echo "Function Test"
+                echo "Function Test echoooo. Updated 15:00 in GIT"
             }
         }
     }
