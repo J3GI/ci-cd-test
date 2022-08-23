@@ -6,7 +6,7 @@ pipeline {
     }
     parameters {
         string(name: 'IMAGE',
-               defaultValue: 'hello',
+               defaultValue: 'generated-image',
                description: 'Docker Image Name')
 
         string(name: 'ARTIFACTORY_URL',
