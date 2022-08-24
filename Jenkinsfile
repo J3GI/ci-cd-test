@@ -90,7 +90,7 @@ pipeline {
                 script {
                     echo "Deploy with k8s on server"
                     if (params.MONGODB == 'REDEPLOY_MONGODB') {
-                        sh "ssh -o StrictHostKeyChecking=no -i ${env.SERVER_LOGIN} ${params.SSH_USER}@${params.SERVER_FQDN} 'kubectl apply -f https://raw.githubusercontent.com/helijunky/ci-cd-test/k8s/mongo.yaml'"
+                        sh "ssh -o StrictHostKeyChecking=no -i ${env.SERVER_LOGIN} ${params.SSH_USER}@${params.SERVER_FQDN} 'kubectl apply -f https://raw.githubusercontent.com/J3GI/ci-cd-test/k8s/mongo.yaml'"
                         sleep 90
                         sh "ssh -o StrictHostKeyChecking=no -i ${env.SERVER_LOGIN} ${params.SSH_USER}@${params.SERVER_FQDN} 'kubectl exec -it rocketmongo-0 -- mongo --eval \"printjson(rs.initiate())\"'"
                     }
