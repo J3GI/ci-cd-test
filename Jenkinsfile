@@ -22,7 +22,8 @@ pipeline {
                description: 'user for ssh connection')
 
         string(name: 'SERVER_FQDN',
-               defaultValue: 'ec2-34-224-56-197.compute-1.amazonaws.com',
+               defaultValue: 'ec2-3-84-200-167.compute-1.amazonaws.com',    // non-jenkins
+               //defaultValue: 'ec2-34-224-56-197.compute-1.amazonaws.com', // jenkins
                description: 'Server address for ssh connection')
     }
     
